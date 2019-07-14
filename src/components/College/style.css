@@ -1,0 +1,22 @@
+.card {
+    height: 15rem;
+    width: 15rem;
+    border: .1rem solid black;
+    border-radius: 1rem;
+    margin: 2rem;
+    -webkit-box-shadow: 5px 5px 15px 5px #000000; 
+    box-shadow: 5px 5px 15px 0px #000000;
+    background: white;
+}
+
+.img-container {
+    width: 100%;
+    height: 100%;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+
