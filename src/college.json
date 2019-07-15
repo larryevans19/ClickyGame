@@ -95,5 +95,13 @@
         "name": "Louisville",
         "image": "/images/Ville.png",
         "clicked": false
+    },
+
+    {
+        "id": 15,
+        "name": "NotreDame",
+        "image": "/images/ND.png",
+        "clicked": false
     }
+
 ]

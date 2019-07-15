@@ -32,7 +32,10 @@
   }
 }
 
-.container {
+.wrapper {
   display: flex;
   flex-wrap: wrap;
+  margin: 0 !important;
+  width: 95% !important;
+
 }

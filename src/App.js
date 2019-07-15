@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import College from "./components/College";
+import Navbar from "./components/Navbar";
+import ScoreBoard from "./components/ScoreBoard"
 import colleges from "./college.json";
 
 import './App.css';
@@ -14,25 +16,19 @@ class App extends Component {
 
   render() {
     return (
-      <div className="container">
-        {this.state.colleges.map(colleges => (
-          <College
-            name={colleges.name}
-            image={colleges.image}
-          />
+      <div className="justify-content-center">
+        <Navbar />
+        <ScoreBoard />
+        <div className="wrapper justify-content-center">
+          {this.state.colleges.map(colleges => (
+            <College
+              name={colleges.name}
+              image={colleges.image}
+            />
+          ))}
 
-        ))}
+        </div>
       </div>
-
-      // <College
-      //   name={colleges[1].name}
-      //   image={colleges[1].image}
-      // />
-      // <College
-      //   name={colleges[2].name}
-      //   image={colleges[2].image}
-      // />
-    
     )
   }
 }

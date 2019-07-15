@@ -1,22 +1,18 @@
-.card {
-    height: 15rem;
-    width: 15rem;
+.scoreboard {
+    background: white;
+    width: 50%;
+    display: inline-block;
+    height: 6rem;
+    padding: 1rem;
     border: .1rem solid black;
     border-radius: 1rem;
     margin: 1rem 2.5rem 1rem 2.5rem;
     -webkit-box-shadow: 5px 5px 15px 5px #000000; 
     box-shadow: 5px 5px 15px 0px #000000;
-    background: white;
-}
-
-.img-container {
-    width: 100%;
-    height: 100%;
-}
-
-img {
-    width: 100%;
-    height: 100%;
+    
 }
 
 
+h1 {
+    margin: 0 auto;
+}
