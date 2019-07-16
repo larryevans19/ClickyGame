@@ -20,3 +20,11 @@ img {
 }
 
 
+.card:hover {
+    border: .75rem solid #ccff00;
+}
+
+/* img:hover {
+    width: 150%;
+    height: 150%;
+} */

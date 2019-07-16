@@ -5,11 +5,12 @@ import ScoreBoard from "./ScoreBoard";
 class Score extends React.Component {
   // Setting the initial state of the Score component
   state = {
-    score: 0
+    score: 0,
+    highScore: 7
   };
 
   // handleIncrement increases this.state.score by 1
-  handleIncrement = () => {
+  handleScore = () => {
 
     this.setState({ score: this.state.score + 1 });
   };
@@ -23,16 +24,12 @@ class Score extends React.Component {
   // The render method returns the JSX that should be rendered
   render() {
     return (
-      <div className="card text-center">
-        <div className="card-header bg-primary text-white">
-          ScoreBoard
-        </div>
-        <ScoreBoard
-          score={this.state.score}
-          handleIncrement={this.handleIncrement}
-          handleReset={this.handleReset}
-        />
-      </div>
+      <ScoreBoard
+        score={this.state.score}
+        // handleScore={this.handleScore}
+        // handleReset={this.handleReset}
+        highScore={this.state.highScore}
+      />
     );
   }
 }

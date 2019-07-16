@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import College from "./components/College";
 import Navbar from "./components/Navbar";
-import ScoreBoard from "./components/ScoreBoard"
+import Score from "./components/Score";
 import colleges from "./college.json";
 
 import './App.css';
@@ -18,7 +18,7 @@ class App extends Component {
     return (
       <div className="justify-content-center">
         <Navbar />
-        <ScoreBoard />
+        <Score />
         <div className="wrapper justify-content-center">
           {this.state.colleges.map(colleges => (
             <College
