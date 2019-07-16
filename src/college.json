@@ -2,7 +2,7 @@
     {
         "id": 1,
         "name": "GeorgiaTech",
-        "image": "/images/GT.png",
+        "image": require("/images/GT.png",
         "clicked": false
     },
 

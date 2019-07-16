@@ -26,8 +26,7 @@ class Score extends React.Component {
     return (
       <ScoreBoard
         score={this.state.score}
-        // handleScore={this.handleScore}
-        // handleReset={this.handleReset}
+ 
         highScore={this.state.highScore}
       />
     );
