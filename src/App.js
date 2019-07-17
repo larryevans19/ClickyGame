@@ -123,13 +123,34 @@ class App extends Component {
     score: 0
   };
 
-  checkClick = (clicked) => {
-    if (!this.state.clicked) {
+  //Create an empty that will contain the ID of all of the cards that are clicked.  
+  //As each card is clicked, the array is checked to see if that ID was already clicked.
+  //if the array contains that ID, then the game is over.  If the array does not contain the ID, we push the ID to the array.
+  clickedArray = []
+
+  checkClick = (id) => {
+    console.log("clickedArray:",this.clickedArray)
+    console.log("id",id)
+    if (this.clickedArray.includes(id)) {
+      //GAME OVER
+      console.log("GAME OVER!")
+      //Reset the Score to 0
+      this.setState({ score: this.state.score = 0})
+      //Shuffle the Colleges and Rerender them for a new game
+      this.shuffleColleges();
+    }
+
+    else {
       console.log("This wasn't clicked yet")
+      //The clicked ID wasn't in the array, so we'll push it to the array.
+      this.clickedArray.push(id)
+      console.log("Updated clickedArray:",this.clickedArray)
+      //Increment the Score
       this.setState({ score: this.state.score + 1 });
+      //Reshuffle the cards and render for the next guess
       this.shuffleColleges()
-      this.college.clicked = true
-      console.log("Now clicked is:", this.state.clicked)
+      
+      console.log("Now clicked is:", this.state.id)
     }
 
   }
@@ -159,6 +180,7 @@ class App extends Component {
         <div className="wrapper justify-content-center">
           {this.state.colleges.map(colleges => (
             <College
+              id={colleges.id}
               name={colleges.name}
               image={colleges.image}
               clicked={colleges.clicked}
