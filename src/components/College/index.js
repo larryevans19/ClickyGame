@@ -1,13 +1,15 @@
 import React from "react";
 import "./style.css";
 
+
 function College(props) {
   return (
-    <div className="card" id={props.name}>
+    <div className="card d-flex justify-content-center" id={props.name} onClick={() => props.checkClick(props.clicked)}>
       <div className="img-container">
         <img alt={props.name} src={props.image} />
       </div>
-    </div>
+    </div >
+
   );
 }
 
